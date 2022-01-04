@@ -176,8 +176,8 @@ function WordCount(str) {
 function FindingSomeWords(str, word) {
     const DAU_CAU = '.,!?'
     let temp = str.split('')
-    for(let i = 0; i < temp.length; i++) {
-        if(DAU_CAU.includes(temp[i])) {
+    for (let i = 0; i < temp.length; i++) {
+        if (DAU_CAU.includes(temp[i])) {
             temp.splice(i, 1)
             i--
         }
@@ -195,16 +195,16 @@ function FindingSomeWords(str, word) {
 // @return: chuỗi sau khi đã thay
 function ChangingaWord(str, words) {
     const wordArr = words.split(' ')
-    for(let i = 0; i < wordArr.length; i++) {
-        if(wordArr[i] === '') {
+    for (let i = 0; i < wordArr.length; i++) {
+        if (wordArr[i] === '') {
             wordArr.splice(i, 1)
             i--
         }
     }
-    if(wordArr.length !== 2) return 'Error'
+    if (wordArr.length !== 2) return 'Error'
     const src = str.split(' ')
     src.forEach((word, index) => {
-        if(word === wordArr[0]) {
+        if (word === wordArr[0]) {
             src[index] = wordArr[1]
         }
     })
